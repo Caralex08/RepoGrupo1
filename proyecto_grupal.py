@@ -7,7 +7,7 @@ import math
 pygame.init()
 
 # Configuración de la pantalla
-WIDTH, HEIGHT = 800, 600
+WIDTH, HEIGHT = 1500, 800
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Shooter Arcade - Modo Fácil")
 
@@ -165,7 +165,7 @@ while running:
     
     hits = pygame.sprite.spritecollide(player, enemies, True)
     for hit in hits:
-        player.health -= 10
+        player.health -= 4
         enemy = Enemy(player)
         all_sprites.add(enemy)
         enemies.add(enemy)
@@ -193,5 +193,3 @@ while running:
 
 pygame.quit()
 sys.exit()
-
-hello
